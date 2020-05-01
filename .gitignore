@@ -1,0 +1,17 @@
+RRMS.code-workspace
+venv/
+RRMS/animals/__pycache__/
+RRMS/animals/migrations/
+RRMS/application/__pycache__/
+RRMS/application/migrations/
+RRMS/base_settings/__pycache__/
+RRMS/base_settings/migrations/
+RRMS/fosters/__pycache__/
+RRMS/fosters/migrations/
+RRMS/shelters/__pycache__/
+RRMS/shelters/migrations/
+RRMS/vets/__pycache__/
+RRMS/vets/migrations/
+RRMS/RRMS/__pycache__/*.pyc
+RRMS/RRMS/__pycache__/*.cpython-38.pyc
+RRMS/db.sqlite3
