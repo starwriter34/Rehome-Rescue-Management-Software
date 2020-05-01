@@ -38,6 +38,17 @@ class RescueInfo(models.Model):
 	def __str__(self):
 		return self.name
 
+	def save(self, *args, **kwargs):
+		'''
+		Overwrite the save method to only allow one table row for this model. This
+		model allows all the necessary information for the rescue, such as:
+
+		Rescue Name, Address, PO Box Address, Website, etc...
+		'''
+		if self.__class__.objects.count():
+			self.pk = self.__class__.objects.first().pk
+		super().save(*args, **kwargs)
+
 class SocialMedia(models.Model):
 	'''
 	The Rescues Social Media Accounts with Links
