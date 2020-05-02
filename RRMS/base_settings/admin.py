@@ -2,6 +2,8 @@ from django.contrib import admin
 
 from .models import RescueInfo, SocialMedia
 # Register your models here.
+
+
 class RescueInfoAdmin(admin.ModelAdmin):
     fieldsets = (
         (None, {
@@ -17,5 +19,6 @@ class RescueInfoAdmin(admin.ModelAdmin):
             'fields': ('display_regaddress','address1','address2', 'city', 'state', 'zipcode')
         }),
     )
+    
 admin.site.register(SocialMedia)
 admin.site.register(RescueInfo, RescueInfoAdmin)
